@@ -1,0 +1,31 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">id</th>
+        <th scope="col">name</th>
+        <th scope="col">age</th>
+        <th scope="col">position</th>
+        <th scope="col">image</th>
+        <th scope="col">numero</th>
+        <th scope="col">Action</th>
+
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr *ngFor="let c of i">
+        <th scope="row">{{c.id}}</th>
+        <td>{{c.name}}</td>
+        <td>{{c.age}}</td>
+        <td>{{c.position}}</td>
+        <td>{{c.image}}</td>
+        <td>{{c.numero}}</td>
+        <td> <button class="btn btn-success" (click)="goToDisplay(c.id)" >Display</button>
+          <button class="btn btn-warning" (click)="goToEdit(c.id)" >Edit</button>
+ 
+         <button class="btn btn-danger" (click)="deleteMatch(c.id)">Delete</button> </td>
+
+      </tr>
+      
+    </tbody>
+  </table>

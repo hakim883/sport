@@ -1,0 +1,47 @@
+<div class="container" style="margin-top: 120px;">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="d-flex team-vs">
+ <span class="score">
+            <span [ngStyle]="{color:compare(matchInput.scoreOne,matchInput.scoreTwo)[1]}">{{matchInput.scoreOne}}</span> -
+            <span [ngStyle]="{color:compare(matchInput.scoreTow,matchInput.scoreOne)[1]}">{{matchInput.scoreTow}}</span>
+ </span>  
+                      <div class="team-1 w-50">
+            <div class="team-details w-100 text-center">
+              <img src="assets/images/logo_1.png" alt="Image" class="img-fluid">
+              <h3>
+                <span [ngClass]="{
+                  win:compare(matchInput.scoreOne,matchInput.scoreTow)[1]==='green' ,
+                  loss:compare(matchInput.scoreOne,matchInput.scoreTow)[1]==='blue' ,
+                  draw:compare(matchInput.scoreOne,matchInput.scoreTow)[1]==='yellow'}">
+                {{matchInput.teamOne}}</span>
+                <span>({{compare(matchInput.scoreOne,matchInput.scoreTow)[0]}})</span></h3>
+              <ul class="list-unstyled">
+                <li>Anja Landry (7)</li>
+                <li>Eadie Salinas (12)</li>
+                <li>Ashton Allen (10)</li>
+                <li>Baxter Metcalfe (5)</li>
+              </ul>
+            </div>
+          </div>
+          <div class="team-2 w-50">
+            <div class="team-details w-100 text-center">
+              <img src="assets/images/logo_2.png" alt="Image" class="img-fluid"><h3>
+                <span [ngClass]="{
+                  win :compare(matchInput.scoreTow,matchInput.scoreOne)[1]==='green' ,
+                  loss :compare(matchInput.scoreTow,matchInput.scoreOne)[1]==='blue' ,
+                  draw :compare(matchInput.scoreTow,matchInput.scoreOne)[1]==='yellow' }" > 
+                  {{matchInput.teamTow}}</span>
+                  <span>({{compare(matchInput.scoreTow,matchInput.scoreOne)[0]}})</span></h3>               
+            <ul class="list-unstyled">
+                <li>Macauly Green (3)</li>
+                <li>Arham Stark (8)</li>
+                <li>Stephan Murillo (9)</li>
+                <li>Ned Ritter (5)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

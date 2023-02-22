@@ -1,0 +1,34 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">num</th>
+        <th scope="col">scoreOne</th>
+        <th scope="col">scoreTow</th>
+        <th scope="col">teamOne</th>
+        <th scope="col">teamTow</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of i">
+        <!-- <td  ngSubmit="edit()"> <input type="text" [(ngModel)]="book.selected"/> -->
+        <th scope="row">{{book.id}}</th>
+        <td>{{book.scoreOne}}</td>
+        <td>{{book.scoreTow}}</td>
+        <td>{{book.teamOne}}</td>
+        <td>{{book.teamTow}}</td>
+
+        <td> <button class="btn btn-success" (click)="goToDisplay(book.id)" >Display</button>
+          <button class="btn btn-warning" (click)="goToEdit(book.id)" >Edit</button>
+ 
+         <button class="btn btn-danger" (click)="deleteMatch(book.id)">Delete</button> </td>
+
+        <!-- <td>
+          <input type="submit" (click)="goToDisplay(book.id)" class="btn btn-primary py-1 px-2" value="Edit">
+
+          <input type="submit" (click)="edit()" class="btn btn-primary py-1 px-2" value="Edit">
+          <input type="reset" (click)="deleteMatch(book.id)" class="btn btn-primary py-1 px-2" value="Delete">
+        </td> -->
+      </tr>
+    </tbody>
+  </table>

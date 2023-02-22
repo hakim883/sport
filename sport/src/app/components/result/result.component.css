@@ -1,0 +1,26 @@
+/* .win{
+    font-size: 40px;
+    color: green;
+}
+.loss{
+    font-size: 20px;
+    color: blue;
+}
+.draw{
+    font-size: 30px;
+    color: yellow;
+} */
+
+
+.loss{
+    font-size: 20px;
+    color: blue;
+}
+.win{
+    font-size: 40px;
+    color: green;
+}
+.draw{
+    font-size: 30px;
+    color: yellow;
+}

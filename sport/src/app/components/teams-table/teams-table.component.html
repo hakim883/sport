@@ -1,0 +1,28 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">num</th>
+        <th scope="col">name</th> 
+        <th scope="col">Action</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let v of i">
+        <th scope="row">{{v.id}}</th>
+        <td>{{v.name}}</td> 
+        <!-- <td> <button class="btn btn-success" (click)="goToDisplay(match.id)" >Display</button>
+          <button class="btn btn-warning" >Edit</button>
+
+         <button class="btn btn-danger" (click)="deleteMatch(match.id)">Delete</button> </td> -->
+
+
+         <td> <button class="btn btn-success"  >Display</button>
+          <button class="btn btn-warning" >Edit</button>
+
+         <button class="btn btn-danger" >Delete</button> </td>
+
+
+      </tr>     
+    </tbody>
+  </table>
