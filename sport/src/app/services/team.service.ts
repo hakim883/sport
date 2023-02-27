@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class TeamService {
-  teamUrl:string= "http://localhost:8080/api/teams";
+  teamUrl:string= "http://localhost:8089/api/teams";
   constructor(private httpClient:HttpClient) { }
 //response (macth object with id)
 addTeam(team:any){

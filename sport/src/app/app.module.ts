@@ -27,12 +27,12 @@ import { AdminComponent } from './components/admin/admin.component';
 import { MatchesTableComponent } from './components/matches-table/matches-table.component';
 import { PlayresTableComponent } from './components/playres-table/playres-table.component';
 import { TeamsTableComponent } from './components/teams-table/teams-table.component';
-import { TeamsComponent } from './teams/teams.component';
-import { TeamComponent } from './team/team.component';
+import { TeamsComponent } from './components/teams/teams.component';
+import { TeamComponent } from './components/team/team.component';
 import { MatchInfoComponent } from './components/match-info/match-info.component';
 import { EditMatchComponent } from './components/edit-match/edit-match.component';
-import { EditPlayerComponent } from './edit-player/edit-player.component';
-import { EditTeamComponent } from './edit-team/edit-team.component';
+import { EditPlayerComponent } from './components/edit-player/edit-player.component';
+import { EditTeamComponent } from './components/edit-team/edit-team.component';
 import { PlayerInfoComponent } from './components/player-info/player-info.component';
 import { TeamInfoComponent } from './components/team-info/team-info.component'
 @NgModule({

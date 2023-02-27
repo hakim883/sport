@@ -9,7 +9,7 @@ matchUrl:string= "http://localhost:8089/api/matches";
   constructor(private httpClient:HttpClient) { }
 //response (macth object with id)
 addMatch(match:any){
-  return this.httpClient.post(this.matchUrl + "/add",match);
+  return this.httpClient.post(this.matchUrl + "/addmatch",match);
 }
 //response: array of objects
 getAllMatches(){
