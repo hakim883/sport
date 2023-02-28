@@ -14,6 +14,6 @@ userUrl: string = "http://localhost:8089/api/auth";
   }
   //user = {firsname,lasname , email ,pwd ,role}
   signup(user){
-    return this.http.post(this.userUrl + "/signup",user);
+    return this.http.post(this.userUrl + "/register",user);
   }
 }

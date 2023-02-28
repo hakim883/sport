@@ -19,7 +19,7 @@ const routes: Routes = [
 //http://localhost:4200/
 {path: "", component: HomeComponent},
 //http://localhost:4200/signup
-{path: "subscription", component: SignupComponent},
+{path: "register", component: SignupComponent},
 //http://localhost:4200/login
 {path: "login", component: LoginComponent},
 //http://localhost:4200/matches
@@ -28,7 +28,7 @@ const routes: Routes = [
 {path: "addmatch", component: AddMatchComponent},
 {path: "addplayer", component: AddPlayerComponent},
 {path: "addteam", component: AddTeamComponent},
-{path: "admin", component:AdminComponent},
+{path: "signupAdmin", component:AdminComponent},
 {path: "matchInfo/:id", component:MatchInfoComponent},
 {path: "editMatch/:id", component:EditMatchComponent},
 {path: "playerInfo/:id", component:PlayerInfoComponent},

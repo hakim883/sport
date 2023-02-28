@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -9,10 +10,11 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class SignupComponent implements OnInit {
   signupForm: FormGroup;
-  constructor(private formBuilder: FormBuilder , private authService:AuthService) { }
+  path:string;
+  constructor(private formBuilder: FormBuilder , private authService:AuthService, private router:Router) { }
 
   ngOnInit() {
-
+this.path=this.router.url;
     this.signupForm = this.formBuilder.group({
 
       firstName: ["", [Validators.required, Validators.minLength(3)]],
@@ -23,10 +25,15 @@ export class SignupComponent implements OnInit {
     });
   }
   signup() {
-    
+    // let role;
+    // if(this.path == "/signupAdmin"){
+    //   role=["admin","user"];
+    // }else{
+    //   role=["user"];
+    // }
     //alert("clickable")
     //console.log("here object", this.signupForm.value);
-    this.signupForm.value.role=["admin","user"]
+    this.signupForm.value.role=(this.path == "/signupAdmin")?["admin","user"]:["user"];
     this.authService.signup(this.signupForm.value).subscribe(
       (response)=>{
         console.log("here response",response);
